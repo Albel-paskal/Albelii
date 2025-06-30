@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Albel Portfolio — Speed Optimization Tips</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    #speed-tips .container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 40px 20px;
+    }
+    #speed-tips h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #35424a;
+    }
+    #speed-tips ul {
+      list-style: disc inside;
+      margin: 0;
+      padding: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    #speed-tips li {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-left: 4px solid #e8491d;
+      background: #fafafa;
+      transition: background 0.3s ease;
+    }
+    #speed-tips li:hover {
+      background: #f0f0f0;
+    }
+    #speed-tips strong {
+      color: #e8491d;
+    }
+    @media(max-width:600px) {
+      #speed-tips .container { padding: 20px 10px; }
+      #speed-tips h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<section id="speed-tips">
+  <div class="container">
+    <h2>Tips to Speed Up Your Site</h2>
+    <ul>
+      <li><strong>Optimize images:</strong> Compress and resize to actual display dimensions, then serve in modern formats like WebP or AVIF. Use native lazy-loading via <img loading="lazy"> for off-screen images to reduce bandwidth and improve first paint.</li>
+      <li><strong>Minimize HTTP requests:</strong> Bundle and minify CSS/JS, inline critical styles, use CSS sprites for icons—each round-trip adds latency.</li>
+      <li><strong>Enable caching:</strong> Use \Cache-Control headers or ETags, version your assets so browsers reuse them, and set long expiry for static files.</li>
+      <li><strong>Use compression:</strong> Turn on Gzip or Brotli at server level (Apache/Nginx). Brotli typically compresses better than Gzip, especially for text formats.</li>
+      <li><strong>Reduce render-blocking:</strong> Inline critical CSS, defer scripts with defer or async, and prioritize loading above-the-fold content for faster interaction.</li>
+      <li><strong>Leverage a CDN:</strong> Serve static assets like images, fonts, and scripts from distributed edge servers (e.g., Cloudflare, CloudFront) to lower latency.</li>
+      <li><strong>Implement HTTP/2 or HTTP/3:</strong> Modern protocols support multiplexing and header compression—improving responsiveness over old HTTP/1.1.</li>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>
