@@ -9,12 +9,8 @@
     html { scroll-behavior: smooth; }
     body { font:15px/1.5 'Poppins', sans-serif; margin:0; padding:0; background:#f4f4f4; }
     .container { width:80%; margin:auto; overflow:hidden; }
-    header {
-      background:#35424a; color:#fff; padding:20px 0; border-bottom:3px solid #e8491d;
-    }
+    header { background:#35424a; color:#fff; padding:20px 0; border-bottom:3px solid #e8491d; }
     .header-inner { display:flex; justify-content:space-between; align-items:center; }
-    header h1 { margin:0; font-size:28px; }
-    nav { margin-top:10px; }
     nav ul { list-style:none; display:flex; padding:0; margin:0; }
     nav li { margin:0 10px; }
     nav a { color:#fff; text-transform:uppercase; text-decoration:none; font-weight:bold; }
@@ -24,124 +20,70 @@
     .tagline { font-size:18px; color:#333; }
     .button_1 { background:#e8491d; color:#fff; padding:10px 20px; border:none; cursor:pointer; text-decoration:none;}
     section { padding:40px 0; }
-    h1{text-align: center;}
     h2 { text-align:left; margin-bottom:20px; }
-    .card, .case, .service, .testimonial { float:left; width:30%; margin:1.66%; background:#fff; padding:10px; box-sizing:border-box; border-radius:4px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    .case img, .service img { width:100%; border-radius:4px; }
+    .card, .service, .testimonial { float:left; width:30%; margin:1.66%; background:#fff; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); border-radius:4px; box-sizing:border-box; }
+    .service img { width:100%; border-radius:4px; }
     .quote { font-style:italic; margin:15px; border-left:4px solid #e8491d; padding-left:10px; background:#fff; }
-    .success { padding:10px; background:#dfd; color:#060; margin:20px 0; text-align:center; }
     .dark { background:#35424a; color:#fff; padding:20px; }
-    footer {text-align:center; background:#e8491d; color:#fff; padding:20px 0;}
+    footer { text-align:center; background:#e8491d; color:#fff; padding:20px 0; }
     @media(max-width:768px) {
-      .card, .case, .service, .testimonial { width:100%; float:none; margin:10px 0; }
+      .card, .service, .testimonial { width:100%; float:none; margin:10px 0; }
       nav ul { flex-direction:column; }
+      .float-sm { display:none; }
+    }
+    .card input, .card textarea {
+      width:100%; font-size:1.3rem; padding:15px; border:1px solid #ccc; border-radius:4px; box-sizing:border-box;
     }
 
-    .card input[type="text"],
-    .card input[type="tel"],
-    .card textarea {
-      width: 100%;
-      font-size: 1.3rem;
-      padding: 15px;
-      box-sizing: border-box;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    /* Footer & scroll-to-top styles */
-    .footer {
-      background: #222;
-      color: #fff;
-      padding: 30px 0;
-      position: relative;
-    }
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .footer a {
-      color: #e8491d;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-    #back-to-top {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      display: none;
-      background: #e8491d; color: #fff;
-      border: none; border-radius: 50%;
-      width: 40px; height: 40px;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: opacity .3s ease;
-      z-index: 1000;
-    }
-    #back-to-top:hover { opacity: 0.8; }
+    /* Footer layout */
+    .footer { background:#222; color:#fff; padding:30px 0; position:relative; }
+    .footer a { color:#e8491d; text-decoration:none; font-weight:bold; }
+    .footer a:hover { text-decoration:underline; }
 
     /* Floating social icons */
     .float-sm .fl-fl {
-      position: fixed;
-      right: -160px;
-      width: 200px;
-      color: #fff;
-      text-transform: uppercase;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      transition: right .3s ease;
-      z-index: 999;
-      border-radius: 4px 0 0 4px;
+      position:fixed; right:-160px; width:200px; color:#fff; text-transform:uppercase;
+      padding:10px; display:flex; align-items:center; transition:right .3s ease;
+      z-index:999; border-radius:4px 0 0 4px;
     }
-    .float-sm .fl-fl i {
-      font-size: 20px;
-      width: 30px;
-      margin-right: 10px;
-    }
-    .float-sm .fl-fl span {
-      white-space: nowrap;
-    }
-    .float-sm .fl-fl:hover {
-      right: 0;
-    }
-    .float-fb { top: 140px; background: #3b5998; }
-    .float-tw { top: 200px; background: #00aced; }
-    .float-ig { top: 260px; background: #e4405f; }
-    .float-li { top: 320px; background: #0077b5; }
-    .float-wa { top: 380px; background: #25D366; }
+    .float-sm .fl-fl i { font-size:20px; width:30px; margin-right:10px; }
+    .float-sm .fl-fl span { white-space:nowrap; }
+    .float-sm .fl-fl:hover { right:0; }
+    .float-fb { top:140px; background:#3b5998; }
+    .float-tw { top:200px; background:#00aced; }
+    .float-ig { top:260px; background:#e4405f; }
+    .float-li { top:320px; background:#0077b5; }
+    .float-wa { top:380px; background:#25D366; }
 
-    @media (max-width: 768px) {
-      .float-sm { display: none; }
+    /* Back-to-top link */
+    .back-to-top {
+      position:fixed; bottom:20px; right:20px;
+      background:#e8491d; color:#fff; width:40px; height:40px;
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      text-decoration:none; font-size:24px; z-index:1000;
     }
+    .back-to-top:hover { opacity:0.8; }
   </style>
 </head>
 <body id="top">
 
 <header>
   <div class="container header-inner">
-    <div>
-      <h1><span class="highlight">Albel</span> Graphics & Web Design</h1>
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-        </ul>
-      </nav>
-    </div>
-    <img src="1.png" alt="Logo" width="70" height="50">
+    <h1><span class="highlight">Albel</span> Graphics & Web Design</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#boxes">Services</a></li>
+      </ul>
+    </nav>
+    <img src="1.png" alt="Logo" width="70">
   </div>
 </header>
 
 <section id="hero">
   <div class="container">
-    <img src="albel.png" alt="Your Name" class="hero-img">
+    <img src="albel.png" alt="Albel" class="hero-img">
     <h1>Hello, I’m <span class="highlight">Albel</span></h1>
     <p class="tagline">Creative Web & Graphic Designer based in Arusha</p>
     <a href="#boxes" class="button_1">Explore My Services</a>
@@ -151,34 +93,26 @@
 <section id="cases">
   <div class="container">
     <h2>My Works</h2>
-    <p class="tagline">Check out some of my recent projects...</p>
     <div class="card">
       <h3>Car Parking System</h3>
-      <p>Smart, sensor-based, and automated parking system offering real-time slot data, robotics, and enhanced efficiency.</p>
+      <p>Smart, sensor‑based, automated parking with real‑time slot data.</p>
     </div>
-    <div class="card">
-      <h3>Online Clearance Form</h3>
-      <p>Web-based clearance management for students, reducing delays and centralizing workflows.</p>
-    </div>
-    <div class="card">
-      <h3>Graphics And Web Design System</h3>
-      <p>Full-stack design/development agency work ideal for white-label partnerships and complete branding/web solutions.</p>
-    </div>
+    <div class="card"><h3>Online Clearance Form</h3><p>Web‑based clearance workflows for students.</p></div>
+    <div class="card"><h3>Graphics & Web Design System</h3><p>Full‑stack branding and web development agency solutions.</p></div>
     <div style="clear:both;"></div>
   </div>
 </section>
 
 <section id="boxes">
   <div class="container">
-    <h2 id="services">Services I Offer</h2>
-    <p class="tagline">Below are the services that I offer to my clients...</p>
-    <div class="service"><img src="Webdesign.jpg" alt="Website Design"><h3>Website Design</h3></div>
-    <div class="service"><img src="Webdevelopment.jpg" alt="Website Development"><h3>Website Development</h3></div>
-    <div class="service"><img src="Maintanance.jpg" alt="Website Maintenance"><h3>Website Maintenance</h3></div>
-    <div class="service"><img src="Hosting.jpg" alt="Website Hosting"><h3>Website Hosting</h3></div>
-    <div class="service"><img src="Database.jpg" alt="Database Creation"><h3>Database Creation</h3></div>
-    <div class="service"><img src="Graphics.jpg" alt="Graphic Design"><h3>Graphic Design</h3></div>
-    <div class="service"><img src="Network.jpg" alt="Networking Services"><h3>Networking Services</h3></div>
+    <h2>Services I Offer</h2>
+    <div class="service"><img src="Webdesign.jpg" alt=""><h3>Website Design</h3></div>
+    <div class="service"><img src="Webdevelopment.jpg" alt=""><h3>Website Development</h3></div>
+    <div class="service"><img src="Maintanance.jpg" alt=""><h3>Website Maintenance</h3></div>
+    <div class="service"><img src="Hosting.jpg" alt=""><h3>Website Hosting</h3></div>
+    <div class="service"><img src="Database.jpg" alt=""><h3>Database Creation</h3></div>
+    <div class="service"><img src="Graphics.jpg" alt=""><h3>Graphic Design</h3></div>
+    <div class="service"><img src="Network.jpg" alt=""><h3>Networking Services</h3></div>
     <div style="clear:both;"></div>
   </div>
 </section>
@@ -195,8 +129,8 @@
 <section id="faq">
   <div class="container">
     <h2>FAQ</h2>
-    <p><strong>How long does a website take?</strong><br>Usually 2–4 weeks depending on scope.</p>
-    <p><strong>What are your prices?</strong><br>Contact for a quote.</p>
+    <p><strong>How long does a website take?</strong> Usually 2–4 weeks depending on scope.</p>
+    <p><strong>What are your prices?</strong> Contact for a quote.</p>
   </div>
 </section>
 
@@ -215,44 +149,38 @@
     <h2>Subscribe Here</h2>
     <form method="POST" action="https://formspree.io/f/xzzgovvv">
       <input type="email" name="email" placeholder="Your email" required>
-      <button type="submit" name="subscriber" class="button_1">Subscribe The Website</button>
+      <button type="submit" class="button_1">Subscribe</button>
     </form>
   </div>
 </section>
 
-<section id="main">
-  <div class="container">
-    <article id="about">
-      <h2>About Me</h2>
-      <p><b>Country</b> – Tanzania</p>
-      <p><b>City</b> – Arusha</p>
-      <p><b>I'm a creative web & graphic designer based in Arusha with expertise in...</b></p>
-    </article>
-    <article id="contact">
-      <h2>Contact Me</h2>
-      <div class="card">
-        <form method="POST" action="https://formspree.io/f/xblywkyn">
-          <label>Name</label><input type="text" name="name" required><br><br>
-          <label>Phone</label><input type="tel" name="phone" required><br><br>
-          <label>Message</label><textarea name="message" required rows="5" cols="40"></textarea><br><br>
-          <button type="submit" class="button_1">Send Request</button>
-        </form>
-      </div>
-    </article>
+<section id="about" class="container">
+  <h2>About Me</h2>
+  <p><b>Country</b> – Tanzania</p>
+  <p><b>City</b> – Arusha</p>
+  <p>I'm a creative web & graphic designer based in Arusha with expertise in...</p>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact Me</h2>
+  <div class="card">
+    <form method="POST" action="https://formspree.io/f/xblywkyn">
+      <label>Name</label><input type="text" name="name" required><br><br>
+      <label>Phone</label><input type="tel" name="phone" required><br><br>
+      <label>Message</label><textarea name="message" rows="5" required></textarea><br><br>
+      <button type="submit" class="button_1">Send Request</button>
+    </form>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container footer-content">
-    <div class="footer-info">
-      <p><strong>Contact me:</strong> albelpaskal1@gmail.com • +255 789 936 077</p>
-      <p>
-        <strong>Follow me:</strong>
-        <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a> •
-        <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
-      </p>
-      <p>&copy; 2025 Albel Graphics & Web Design</p>
-    </div>
+    <p><strong>Contact me:</strong> albelpaskal1@gmail.com • +255 789 936 077</p>
+    <p><strong>Follow me:</strong>
+      <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a> •
+      <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+    </p>
+    <p>&copy; 2025 Albel Graphics & Web Design</p>
   </div>
 </footer>
 
@@ -275,28 +203,8 @@
   </a>
 </div>
 
-<button id="back-to-top" title="Back to top">↑</button>
-
-<script>
-  // Scroll-to-top functionality
-  const btn = document.getElementById('back-to-top');
-  window.addEventListener('scroll', () => {
-    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-  });
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Optional: Smooth scroll on anchor links (already enabled via CSS, but JS fallback)
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
+<!-- Back-to-top anchor -->
+<a href="#top" class="back-to-top">↑</a>
 
 </body>
 </html>
